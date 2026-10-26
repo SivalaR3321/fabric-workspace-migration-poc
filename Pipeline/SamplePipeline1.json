@@ -1,0 +1,11 @@
+{
+  "name": "SamplePipeline1",
+  "description": "Dummy pipeline for GitHub Actions testing",
+  "environment": "Dev",
+  "activities": [
+    {
+      "name": "TestActivity1",
+      "type": "DummyActivity"
+    }
+  ]
+}
