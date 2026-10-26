@@ -1,0 +1,42 @@
+name: UAT Deployment Test
+
+on:
+  push:
+    branches:
+      - UAT
+
+  workflow_dispatch:
+
+jobs:
+  test-uat:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Show branch
+        run: |
+          echo "Running UAT workflow"
+          echo "Branch: ${{ github.ref_name }}"
+
+      - name: List notebooks
+        run: |
+          echo "Notebooks:"
+          ls -la Notebooks/
+
+      - name: List pipelines
+        run: |
+          echo "Pipelines:"
+          ls -la Pipelines/
+
+      - name: Deployment simulation
+        run: |
+          echo "Starting dummy deployment..."
+          echo "Notebook1 - Ready"
+          echo "Notebook2 - Ready"
+          echo "Notebook3 - Ready"
+          echo "Pipeline1 - Ready"
+          echo "SamplePipeline1 - Ready"
+          echo "SamplePipeline2 - Ready"
+          echo "Dummy UAT deployment completed"
