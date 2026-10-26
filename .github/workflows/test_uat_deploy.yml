@@ -23,12 +23,12 @@ jobs:
       - name: List notebooks
         run: |
           echo "Notebooks:"
-          ls -la Notebooks/
+          ls -la "Sample NB/"
 
       - name: List pipelines
         run: |
           echo "Pipelines:"
-          ls -la Pipelines/
+          ls -la "Pipeline/"
 
       - name: Deployment simulation
         run: |
