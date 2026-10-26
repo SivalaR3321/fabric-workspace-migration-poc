@@ -3,7 +3,7 @@ name: Fabric Deployment Test
 on:
   push:
     branches:
-      - main
+      - Dev
 
   workflow_dispatch:
 
