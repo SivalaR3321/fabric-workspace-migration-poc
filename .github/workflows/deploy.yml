@@ -1,0 +1,21 @@
+name: Fabric Deployment Test
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Test GitHub Actions
+        run: |
+          echo "GitHub Actions is working"
+          echo "Ready for Fabric deployment"
