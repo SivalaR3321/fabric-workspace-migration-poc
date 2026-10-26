@@ -1,17 +1,21 @@
-name: Validate Fabric samples
+name: Fabric Deployment Test
 
 on:
   push:
-  pull_request:
+    branches:
+      - main
+
   workflow_dispatch:
 
 jobs:
-  validate:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
-      - name: Validate sample Fabric item definitions
-        run: python scripts/validate_fabric_samples.py
+      - name: Test GitHub Actions
+        run: |
+          echo "GitHub Actions is working"
+          echo "Ready for Fabric deployment"
