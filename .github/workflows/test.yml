@@ -17,5 +17,5 @@ jobs:
 
       - name: Test GitHub Actions
         run: |
-          echo "GitHub Actions is working"
+          echo "GitHub Actions is working.."
           echo "Ready for Fabric deployment"
